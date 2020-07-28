@@ -8,43 +8,43 @@ Parameters:
 
   EksClusterName:
     Type: String
-    Description: The name of the EKS cluster created
-    Default: 
+    Description: simple-jwt-api-7
+    Default: simple-jwt-api-7
     MinLength: 1
     MaxLength: 100
-    ConstraintDescription: You must enter the EKS cluster name
+    ConstraintDescription: simple-jwt-api-7
 
   GitSourceRepo:
     Type: String
-    Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
-    Default: 
+    Description: uda-aws
+    Default: uda-aws
     MinLength: 1
     MaxLength: 100
-    ConstraintDescription: You must enter a GitHub repository name
+    ConstraintDescription: uda-aws
 
   GitBranch:
     Type: String
     Default: master
-    Description: GitHub git repository branch - change triggers a new build
+    Description: master
     MinLength: 1
     MaxLength: 100
-    ConstraintDescription: You must enter a GitHub repository branch name
+    ConstraintDescription: master
 
   GitHubToken:
     Type: String
     NoEcho: true
-    Description: GitHub API token - see https://github.com/blog/1509-personal-api-tokens
+    Description: 25824f192b84f0df0bf3bcf2d406febb9d6bf889
     MinLength: 3
     MaxLength: 100
-    ConstraintDescription: You must enter a GitHub personal access token
+    ConstraintDescription: 25824f192b84f0df0bf3bcf2d406febb9d6bf889
 
   GitHubUser:
     Type: String
-    Default:
-    Description: GitHub username or organization
+    Default: prof2k
+    Description: prof2k
     MinLength: 3
     MaxLength: 100
-    ConstraintDescription: You must enter a GitHub username or organization
+    ConstraintDescription: prof2k
 
   CodeBuildDockerImage:
     Type: String
@@ -56,11 +56,11 @@ Parameters:
 
   KubectlRoleName:
     Type: String
-    Default: 
-    Description: IAM role used by kubectl to interact with EKS cluster
+    Default: UdacityFlaskDeployCBKubectlRole
+    Description: UdacityFlaskDeployCBKubectlRole
     MinLength: 3
     MaxLength: 100
-    ConstraintDescription: You must enter a kubectl IAM role
+    ConstraintDescription: UdacityFlaskDeployCBKubectlRole
 
 
 Metadata:
